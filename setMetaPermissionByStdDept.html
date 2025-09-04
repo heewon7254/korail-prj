@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>목록</title>
-    <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../css/jquery-ui.min.css">
-    <link rel="stylesheet" href="../css/grid_sample.css">
-    <script src="../js/jquery.js"></script>
-    <script src="../js/jquery-ui.js"></script>
-    <script src="../js/common.js"></script>
+    <title>타이틀</title>
+    <base href="https://heewon7254.github.io/korail-prj/">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/grid_sample.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <body>
+    <!-- class="active" 추가 시 서브메뉴 보임 -->
     <header>
         <div class="con">
             <div class="gnb_wrap">
@@ -195,7 +197,7 @@
             </button>
         </div>
     </div>
-    <!-- 헤더 검색창 팝업 --> 
+    <!-- 헤더 검색창 팝업 -->
     <div class="layer_popup" id="heaader_search_popup">
         <div class="popup_box">
             <button class="btn pop_close">
@@ -383,28 +385,30 @@
     </div>
     <div class="wrap">
         <!-- 왼쪽 리스트 -->
-        <aside>
+        <aside style="position: relative;" class="mytask">
             <div class="aside_con">
                 <!-- 메뉴 -->
                 <div class="menu">
-                    <span class="all_menu_txt">ALL MENU</span>
+                    <span class="all_menu_txt">MY PAGE</span>
                     <button class="aside_hide_btn">
                         <span class="sr_only">메뉴 토글 버튼</span>
                     </button>
                     <nav>
                         <ul class="gnb"> 
                             <!-- class="on" 추가 시 페이지 활성화 표시 -->
-                            <li class="on" id="serviceIntroduction">
+                            <li id="myPage_myTask">
                                 <a href="javascript:void(0)"><span>MENU 1</span></a>
                                  <div class="lnb_wrap">
                                     <ul class="lnb">
                                         <li><a href="javascript:void(0)">MENU</a></li>
                                         <li><a href="javascript:void(0)">MENU</a></li>
                                         <li><a href="javascript:void(0)">MENU</a></li>
+                                        <li><a href="javascript:void(0)">MENU</a></li>
+                                        <li><a href="javascript:void(0)">MENU</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li id="dataStatus">
+                            <li id="myPage_personalSettings">
                                 <a href="javascript:void(0)"><span>MENU 2</span></a>
                                 <div class="lnb_wrap">
                                     <ul class="lnb">
@@ -413,29 +417,23 @@
                                     </ul>
                                 </div>
                             </li> 
-                            <li id="dataVisualization">
+                            <li class="on" id="myPage_adminGeneral">
                                 <a href="javascript:void(0)"><span>MENU 3</span></a>
                                 <div class="lnb_wrap">
                                     <ul class="lnb">
                                         <li><a href="javascript:void(0)">MENU</a></li>
                                         <li><a href="javascript:void(0)">MENU</a></li>
+                                        <li><a href="javascript:void(0)">MENU</a></li>
+                                        <li><a href="javascript:void(0)">MENU</a></li>
+                                        <li><a href="javascript:void(0)">MENU</a></li>
+                                        <li><a href="javascript:void(0)">MENU</a></li>
+                                        <li><a href="javascript:void(0)">MENU</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li id="portalCommunity">
-                                <a href="javascript:void(0)"><span>MENU 4</span></a>
+                            <li id="myPage_adminProductManagement">
+                                <a href="javascript:void(0)"><span>MENU 1</span></a>
                                 <div class="lnb_wrap">  
-                                    <ul class="lnb">
-                                        <li><a href="javascript:void(0)">MENU</a></li>
-                                        <li><a href="javascript:void(0)">MENU</a></li>
-                                        <li><a href="javascript:void(0)">MENU</a></li>
-                                        <li><a href="javascript:void(0)">MENU</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li id="myPage">
-                                <a href="javascript:void(0)"><span>MENU 5</span></a>
-                                <div class="lnb_wrap">
                                     <ul class="lnb">
                                         <li><a href="javascript:void(0)">MENU</a></li>
                                         <li><a href="javascript:void(0)">MENU</a></li>
@@ -448,6 +446,12 @@
                         </ul>
                     </nav>
                 </div>
+                <div class="link">
+                    <a href="javascript:void(0)">LINK<img src="img/aside_link_arrow.svg" alt="화살표이미지"></a>
+                    <a href="javascript:void(0)">LINK<img src="img/aside_link_arrow.svg" alt="화살표이미지"></a>
+                    <a href="javascript:void(0)">LINK<img src="img/aside_link_arrow.svg" alt="화살표이미지"></a>
+                    <a href="javascript:void(0)">LINK<img src="img/aside_link_arrow.svg" alt="화살표이미지"></a>
+                </div>
                 <!-- 상세검색 -->
             </div>
         </aside>
@@ -456,50 +460,86 @@
             <a href="javascript:void"><span class="sr_only">home</span></a>
             <a href="javascript:void">location</a>
             <a href="javascript:void">location</a>
+            <a href="javascript:void">location</a>
         </div> 
         <div class="contents">
             <!-- 상단 공통 끝 -->
             <div class="sub">
                 <div class="sub_title_wrap">
                     <h2>TITLE</h2>
-                    <h3>SUB TITLE</h3>
                 </div>
-                <div class="sub_btn_wrap">
-                    <div class="total_cnt">전체<span>(1,005건)</span></div>
-                    <div class="filter_search">
-                        <div class="select_custom">
-                            <select id="select">
-                                <option value="">전체</option>
-                                <option value="">전체</option>
-                                <option value="">전체</option>
-                                <option value="">전체</option>
-                            </select>
+                <div class="system_use_grid_wrap">
+                    <div class="sys_list">
+                        <div class="sub_btn_wrap">
+                            <div class="sub_title">SUB TITLE</div>
                         </div>
-                        <input type="text" placeholder="검색어 입력">
-                        <a href="javascript:void(0)" class="btn">검색</a>
+                        <div class="sub_search_wrap one_row_layout">
+                            <fieldset class="item_inn">
+                                <div class="item">
+                                    <label>검색조건</label>
+                                    <input type="text">
+                                </div>
+                            </fieldset>
+                            <div class="btn">
+                                <a href="javascript:void(0)" class="primary">검색</a>
+                            </div>
+                        </div>
+                        <div class="grid_wrap">
+                            <div id="myGrid_01" style="height: 272px; margin-bottom: 40px;" class="ag-theme-quartz"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="grid_wrap notice">
-                    <div id="myGrid_01" style="height: 470px;" class="ag-theme-quartz lg_theme"></div>
-                    <div class="page">
-                        <!-- class="on" 추가 시 페이지 활성화 -->
-                        <a href="javascript:void(0)" class="first"></a>
-                        <a href="javascript:void(0)" class="prev"></a>
-                        <a href="javascript:void(0)" class="on">1</a>
-                        <a href="javascript:void(0)" class="">2</a>
-                        <a href="javascript:void(0)" class="">3</a>
-                        <a href="javascript:void(0)" class="">50</a>
-                        <a href="javascript:void(0)" class="next"></a>
-                        <a href="javascript:void(0)" class="last"></a>
-                        <select name="" id="">
-                            <option value="">10 / page</option>
-                            <option value="">20 / page</option>
-                            <option value="">30 / page</option>
-                        </select>
-                    </div>
-                    <div class="action_btn_wrap">
-                        <div class="right">
-                            <a href="javascript:void(0)" class="write">글쓰기</a>
+                    <div class="sys_list">
+                        <div class="sub_btn_wrap">
+                            <div class="sub_title">SUB TITLE</div>
+                        </div>
+                        <div class="sub_search_wrap one_row_layout">
+                            <fieldset class="item_inn">
+                                <div class="item">
+                                    <label>검색조건</label>
+                                    <div class="select_custom">
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <label>검색조건</label>
+                                    <div class="select_custom">
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="btn">
+                                <a href="javascript:void(0)" class="primary">검색</a>
+                            </div>
+                        </div>
+                        <div class="sub_btn_wrap">
+                            <div class="total_cnt">전체<span>총<b>1,005</b>건</span></div>
+                            <div class="sub_btn">
+                                <a href="javascript:void(0)" class="icon save">저장</a>
+                            </div>
+                        </div>
+                        <div class="grid_wrap">
+                            <div id="myGrid_02" style="height: 544px;" class="ag-theme-quartz"></div>
+                            <div class="page">
+                                <!-- class="on" 추가 시 페이지 활성화 -->
+                                <a href="javascript:void(0)" class="first"></a>
+                                <a href="javascript:void(0)" class="prev"></a>
+                                <a href="javascript:void(0)" class="on">1</a>
+                                <a href="javascript:void(0)" class="">2</a>
+                                <a href="javascript:void(0)" class="">3</a>
+                                <a href="javascript:void(0)" class="">4</a>
+                                <a href="javascript:void(0)" class="">5</a>
+                                <a href="javascript:void(0)" class="next"></a>
+                                <a href="javascript:void(0)" class="last"></a>
+                                <select name="" id="">
+                                    <option value="">10 / page</option>
+                                    <option value="">20 / page</option>
+                                    <option value="">30 / page</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -508,13 +548,15 @@
         </div>
     </div>
     <!-- 그리드 js -->
-    <script src="../js/agGrid/ag-grid-community.js"></script>
-    <script src="../js/agGrid/ag-grid-community.noStyle.js"></script>
-    <script src="../js/board/list.js"></script>
+    <script src="js/agGrid/ag-grid-community.js"></script>
+    <script src="js/agGrid/ag-grid-community.noStyle.js"></script>
+    <script src="js/admin/setMetaPermissionByStdDept.js"></script>
     <script>
-        $(".select_custom select").each(function() {
-            $(this).selectmenu({
-                appendTo: $(this).closest(".select_custom")
+        $(document).ready(function(){
+            $(".select_custom select").each(function() {
+                $(this).selectmenu({
+                    appendTo: $(this).closest(".select_custom")
+                });
             });
         });
     </script>
